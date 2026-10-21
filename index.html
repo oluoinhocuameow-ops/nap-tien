@@ -31,7 +31,7 @@
 </head>
 <body>
 <div id="meowWalletApp">
- <div class="mw-login" id="mw-login"><div class="mw-login-cat"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_ah7tc7QS8c6K2bpUxUDiLZXnriyHUhE9duNnrG894zfhkDrDSqvqUhyphenhyphenxeSNB1ihkjFsJmYHtiBWENob9nxS1UL0uZ5bBB5lCcA61oaUY3u_92Pw-SGMU_oq0qLH-XECkCLSO5Xn_zZDkLyv8UKFBuFNet0um42MSr7wAxYbVS1NOepcH4fG7Mlp6-AE/s215/t%E1%BA%A3i%20xu%E1%BB%91ng%20(3).png" alt="Mặt mèo Meow Wallet"></div><div class="mw-brand"><div><div class="mw-brand-title">MEOW WALLET</div><div class="mw-brand-sub">♡ YOUR CUTE LITTLE WALLET ♡</div></div></div><p>🔐 Khu vực ví riêng tư · Vui lòng đăng nhập</p><p style="font-size:12px;color:#a27b96">🐾 Đăng nhập khách sẽ được ghi nhớ trên trình duyệt này cho đến khi bạn bấm Thoát.</p><div class="mw-login-buttons"><button id="mw-open-admin">👑 Đăng nhập Admin</button><button id="mw-open-customer">🐾 Đăng nhập Khách</button></div><div id="mw-login-form" class="mw-login-form" hidden><label id="mw-login-label">Mật khẩu Admin</label><input id="mw-login-password" type="password" placeholder="Mật khẩu Admin"><input id="mw-login-customer" placeholder="ID khách hàng" hidden><button id="mw-login-submit" class="mw-primary">💗 Đăng nhập</button><p id="mw-login-msg" aria-live="polite"></p><button id="mw-login-back" class="mw-secondary">← Quay lại</button></div></div>
+ <div class="mw-login" id="mw-login"><div class="mw-login-cat"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_ah7tc7QS8c6K2bpUxUDiLZXnriyHUhE9duNnrG894zfhkDrDSqvqUhyphenhyphenxeSNB1ihkjFsJmYHtiBWENob9nxS1UL0uZ5bBB5lCcA61oaUY3u_92Pw-SGMU_oq0qLH-XECkCLSO5Xn_zZDkLyv8UKFBuFNet0um42MSr7wAxYbVS1NOepcH4fG7Mlp6-AE/s215/t%E1%BA%A3i%20xu%E1%BB%91ng%20(3).png" alt="Mặt mèo Meow Wallet"></div><div class="mw-brand"><div><div class="mw-brand-title">MEOW WALLET</div><div class="mw-brand-sub">♡ YOUR CUTE LITTLE WALLET ♡</div></div></div><p>🔐 Khu vực ví riêng tư · Vui lòng đăng nhập</p><div class="mw-login-buttons"><button id="mw-open-admin">👑 Đăng nhập Admin</button><button id="mw-open-customer">🐾 Đăng nhập Khách</button></div><div id="mw-login-form" class="mw-login-form" hidden><label id="mw-login-label">Mật khẩu Admin</label><input id="mw-login-password" type="password" placeholder="Mật khẩu Admin"><input id="mw-login-customer" placeholder="ID khách hàng" hidden><button id="mw-login-submit" class="mw-primary">💗 Đăng nhập</button><p id="mw-login-msg" aria-live="polite"></p><button id="mw-login-back" class="mw-secondary">← Quay lại</button></div></div>
  <div id="mw-dashboard" hidden>
   <header class="mw-head"><div class="mw-cat"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_ah7tc7QS8c6K2bpUxUDiLZXnriyHUhE9duNnrG894zfhkDrDSqvqUhyphenhyphenxeSNB1ihkjFsJmYHtiBWENob9nxS1UL0uZ5bBB5lCcA61oaUY3u_92Pw-SGMU_oq0qLH-XECkCLSO5Xn_zZDkLyv8UKFBuFNet0um42MSr7wAxYbVS1NOepcH4fG7Mlp6-AE/s215/t%E1%BA%A3i%20xu%E1%BB%91ng%20(3).png" alt="Meow Wallet"></div><div class="mw-head-info"><h2>MEOW WALLET</h2><p id="mw-welcome">Chào mừng bạn 💗</p></div><button id="mw-logout" class="mw-secondary">Thoát ↪</button></header>
   <nav id="mw-admin-nav" class="mw-tabs" hidden><button data-page="admin-deposit">💗 Nạp tiền</button><button data-page="admin-vouchers">🎟️ Tạo Voucher</button><button data-page="admin-customers">📒 Sổ khách</button><button data-page="admin-requests">🧾 Giao dịch</button><button data-page="admin-topup-requests">📥 Duyệt nạp tiền</button><button data-page="admin-voucher-history">💗 Lịch sử nạp</button></nav>
@@ -50,6 +50,274 @@
  </div>
 </div>
 
+<style>
+#meow-price-area .pastel-box{
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#ffe4ec,#ffd6ec,#fff0f5);
+  border: 2px solid rgba(255,182,193,0.6);
+  position: relative;
+  box-shadow: 
+    0 15px 40px rgba(255,182,193,0.6),
+    inset 0 0 30px rgba(255,255,255,0.8);
+  overflow: hidden;
+}
+#meow-price-area .pastel-box::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(120deg,#fff,#ffc0cb,#fff);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+#meow-price-area .pastel-box::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,rgba(255,255,255,0.4),transparent);
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+#meow-price-area .sparkle{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  animation: sparkle 4s infinite;
+  z-index: 1;
+}
+@keyframes sparkle {
+  0% {opacity: 0; transform: scale(0.5);}
+  50% {opacity: 1; transform: scale(1.8);}
+  100% {opacity: 0;}
+}
+#meow-price-area .title{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+
+  background: linear-gradient(180deg,#ffffff,#ffc0cb,#ff6fa5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 2px 0 #fff,
+    0 4px 0 #ffd6e7,
+    0 6px 0 #ffb6c1,
+    0 10px 20px rgba(255,105,180,0.5);
+
+  filter: drop-shadow(0 0 6px rgba(255,182,193,0.6));
+}
+#meow-price-area .title::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.9), transparent);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  animation: shine 3s infinite;
+}
+@keyframes shine {
+  0% {transform: translateX(-120%);}
+  100% {transform: translateX(120%);}
+}
+#meow-price-area .price-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+#meow-price-area .price-list li{
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  font-size: 18px;
+  color: #ff5c8a;
+  border-bottom: 1px dotted #ff9bb5;
+  transition: 0.25s;
+}
+#meow-price-area .price-list li:hover{
+  transform: translateX(6px);
+  color: #ff2f75;
+}
+#meow-price-area .corner{
+  position: absolute;
+  font-size: 34px;
+  z-index: 2;
+}
+#meow-price-area .top-left{top: 12px; left: 12px;}
+#meow-price-area .bottom-right{bottom: 12px; right: 12px;}
+#meow-price-area .bottom-left{bottom: 12px; left: 12px;}
+#meow-price-area .blog-icon{
+  font-size: 16px;
+  background: linear-gradient(135deg,#fff0f5,#ffe4ec);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 
+    0 5px 10px rgba(255,182,193,0.5),
+    inset 0 0 5px rgba(255,255,255,0.8);
+}
+#meow-price-area .search-box{
+  position: relative;
+  margin: 0 auto 20px;
+  z-index: 2;
+}
+#meow-price-area .search-box input{
+  width:100%;
+  box-sizing:border-box;
+  padding:15px 18px 15px 50px;
+  border:2px solid rgba(255,192,218,.6);
+  outline:none;
+
+  border-radius:30px;
+
+  background:linear-gradient(
+    145deg,
+    #fffefe,
+    #fff5f9,
+    #ffe7f2
+  );
+
+  box-shadow:
+    inset 0 3px 8px rgba(255,255,255,.95),
+    0 8px 22px rgba(255,170,205,.35);
+
+  color:#e85d9c;
+  font-size:16px;
+  font-weight:600;
+
+  transition:.3s;
+}
+#meow-price-area .search-box input::placeholder{
+  color:#f39ac7;
+}
+#meow-price-area .search-box input:focus{
+  transform:scale(1.02);
+  border-color:#ff8fbe;
+  box-shadow:
+    0 0 0 4px rgba(255,192,218,.35),
+    0 10px 28px rgba(255,170,205,.45);
+}
+#meow-price-area .search-box::before{
+  content:"🎀";
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:22px;
+  pointer-events:none;
+}
+#meow-price-area .search-count{
+  text-align:center;
+  margin-top:10px;
+  color:#e85d9c;
+  font-size:14px;
+  font-weight:bold;
+  text-shadow:0 1px 3px rgba(255,255,255,.8);
+}
+#meow-price-area .cute-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin:18px 0 22px;
+    position:relative;
+    z-index:2;
+}
+#meow-price-area .cute-divider .line{
+    flex:1;
+    max-width:120px;
+    height:3px;
+    border-radius:99px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ffc2de,
+        #ffd9eb,
+        #ffc2de,
+        transparent
+    );
+    box-shadow:
+        0 0 8px rgba(255,182,213,.6),
+        0 0 15px rgba(255,220,235,.8);
+}
+#meow-price-area .cute-divider span{
+    font-size:20px;
+    animation:dividerFloat 2.5s ease-in-out infinite;
+    filter:drop-shadow(0 2px 5px rgba(255,170,205,.45));
+}
+#meow-price-area .cute-divider span:nth-child(3){
+    animation-delay:.3s;
+}
+#meow-price-area .cute-divider span:nth-child(5){
+    animation-delay:.6s;
+}
+@keyframes dividerFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-5px) scale(1.1);
+    }
+}
+#meow-price-area .pastel-box{max-width:700px}#meow-price-area .price-list li{gap:15px}#meow-price-area .price-list li span:last-child{white-space:nowrap;font-weight:700}
+</style>
+<section id="meow-price-area" aria-label="Bảng giá truyện"><div class="pastel-box">
+
+  <!--✨ SPARKLES-->
+  <div class="sparkle" style="left: 15%; top: 15%;"></div>
+  <div class="sparkle" style="left: 80%; top: 30%;"></div>
+  <div class="sparkle" style="left: 25%; top: 70%;"></div>
+  <div class="sparkle" style="left: 60%; top: 60%;"></div>
+  <div class="sparkle" style="left: 50%; top: 85%;"></div>
+
+  <!--🎀 ICON-->
+  <div class="corner top-left blog-icon">🐱 Blog</div>
+  <div class="corner bottom-right">🎀</div>
+  <div class="corner bottom-left">🍒</div>
+
+  <!--💖 TITLE-->
+  <div class="title">Blog Price</div>
+  
+  <div class="search-box">
+    <input
+        type="text"
+        id="searchNovel"
+        placeholder="🐱 Tìm tên truyện..."
+    >
+    <div class="search-count" id="searchCount"></div>
+</div>
+  
+<div class="cute-divider">
+    <span>🎀</span>
+    <div class="line"></div>
+    <span>🐱</span>
+    <div class="line"></div>
+    <span>🌸</span>
+</div>
+  <!--💰 LIST-->
+  <ul class="price-list" id="priceList">
+    <li class="loading-price">
+        🐱 Đang tải bảng giá...
+    </li>
+</ul>
+
+</div>
+
+</section>
 <!-- KHUNG ĐỌC TRUYỆN: thay dấu # trong href bằng link web đọc truyện của bạn -->
 <section id="meow-read-cta" aria-label="Vào web đọc truyện">
   <div class="mrc-icon">📚💗</div>
@@ -60,6 +328,22 @@
 </section>
 <div id="mw-image-modal" class="mw-modal" hidden><div class="mw-modal-inner"><button id="mw-image-close" class="mw-modal-close">✕</button><h3>🖼️ Ảnh chuyển khoản</h3><img id="mw-large-image" alt="Ảnh giao dịch khách gửi"></div></div>
 <div id="meow-contact"><div class="mc-cat">🐱🎀</div><h3 class="mc-title">💌 Nếu có thắc mắc, vui lòng liên hệ 💌</h3><p class="mc-desc">Có điều gì cần hỗ trợ thì nhắn Meow nha!<br>Meow sẽ cố gắng phản hồi sớm nhất có thể ♡</p><div class="mc-socials"><a class="mc-social" href="https://www.facebook.com/profile.php?id=61583591557663" target="_blank" rel="noopener"><span class="mc-circle">f</span><span>Facebook</span></a><a class="mc-social" href="mailto:oluoinhocuameow@gmail.com"><span class="mc-circle">@</span><span>Mail</span></a><a class="mc-social" href="https://www.facebook.com/profile.php?id=61582069564705" target="_blank" rel="noopener"><span class="mc-circle">P</span><span>Page</span></a></div><div class="mc-footer">♡ Ổ Lười Nhỏ Của Meow · Khu Vườn Sắc Nữ ♡</div></div>
+<script>
+(()=>{
+ const list=document.getElementById('priceList'),input=document.getElementById('searchNovel'),count=document.getElementById('searchCount');
+ const KEY='meow_prices_cache_v3',TTL=5*60*1000;
+ let all=[];
+ const formatPrice=value=>{const raw=String(value??'').trim();const match=raw.replace(/\s/g,'').match(/^([\d.,]+)(k|đ|vnđ)?$/i);if(!match)return raw;const suffix=(match[2]||'').toLowerCase();let digits=match[1].replace(/[.,]/g,'');if(!digits)return raw;let n=Number(digits);if(!Number.isSafeInteger(n))return raw;if(suffix==='k')n*=1000;return n.toLocaleString('vi-VN')+'đ'};
+ const valid=p=>p!==null&&p!==undefined&&!['','0','0đ','0k','0.000đ'].includes(String(p).trim().toLowerCase());
+ function render(){const q=input.value.trim().toLocaleLowerCase('vi'),items=q?all.filter(x=>x.name.toLocaleLowerCase('vi').includes(q)):all;list.replaceChildren();const frag=document.createDocumentFragment();for(const x of items){const li=document.createElement('li'),name=document.createElement('span'),price=document.createElement('span');name.textContent=x.name;price.textContent=formatPrice(x.price);li.append(name,price);frag.append(li)}list.append(frag);count.textContent=(q?'✨ Tìm thấy ':'📚 Tổng: ')+items.length+' truyện';if(!items.length){const li=document.createElement('li');li.textContent='🐱 Chưa có truyện phù hợp';list.append(li)}}
+ let saved;try{saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&Array.isArray(saved.data)){all=saved.data;render()}}catch(e){}
+ async function refresh(){try{const r=await fetch('https://olncm-fa88c-default-rtdb.asia-southeast1.firebasedatabase.app/stories.json',{cache:'no-cache'});if(!r.ok)throw Error('Lỗi tải');const data=await r.json()||{};all=Object.entries(data).map(([id,s])=>({id,name:s?.info?.name||'',price:s?.info?.price})).filter(x=>x.name&&valid(x.price)).sort((a,b)=>a.name.localeCompare(b.name,'vi'));try{localStorage.setItem(KEY,JSON.stringify({at:Date.now(),data:all}))}catch(e){}render()}catch(e){if(!all.length)count.textContent='⚠️ Không kết nối được bảng giá';}}
+ input.addEventListener('input',render);
+ if(!saved||Date.now()-saved.at>TTL)refresh();
+ // Chỉ làm mới định kỳ khi trang đang hiển thị, tránh tải lại mỗi 10 giây.
+ setInterval(()=>{if(!document.hidden)refresh()},TTL);
+})();
+</script>
 <script type="module">
 import {initializeApp,getApps,getApp} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
 import {getDatabase,ref,onValue,get,set,update,push,runTransaction} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-database.js";
@@ -70,9 +354,7 @@ const app=getApps().length?getApp():initializeApp(firebaseConfig),db=getDatabase
 const money=n=>(Number(n)||0).toLocaleString("vi-VN")+"đ";
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let customers={},wallets={},requests={},transactions={},purchases={},batches={},vouchers={},voucherHistory={},role="",customerId="",loginMode="";
-const sessionKey="meowWalletLogin_v3";
-function saveLoginSession(){try{localStorage.setItem(sessionKey,JSON.stringify({role,customerId,remember:true,savedAt:Date.now()}))}catch(e){}}
-function clearLoginSession(){try{localStorage.removeItem(sessionKey)}catch(e){}}
+const sessionKey="meowWalletLogin_v2";
 function customerName(id){let c=customers[id]||{};return c.name||c.displayName||c.username||c.userName||c.email||id}
 function walletOf(id){return wallets[id]||{balance:0,totalIn:0,totalOut:0}}
 function empty(el,msg="Chưa có dữ liệu."){$(el).innerHTML=`<div class="mw-empty">${msg}</div>`}
@@ -86,9 +368,9 @@ document.querySelectorAll("#meowWalletApp [data-page]").forEach(b=>b.addEventLis
 $("mw-open-admin").onclick=()=>{loginMode="admin";$("mw-login-form").hidden=false;$("mw-login-label").textContent="Mật khẩu Admin";$("mw-login-password").hidden=false;$("mw-login-customer").hidden=true;msg("mw-login-msg","")};
 $("mw-open-customer").onclick=()=>{loginMode="customer";$("mw-login-form").hidden=false;$("mw-login-label").textContent="ID khách hàng";$("mw-login-password").hidden=true;$("mw-login-customer").hidden=false;msg("mw-login-msg","")};
 $("mw-login-back").onclick=()=>{$("mw-login-form").hidden=true;loginMode=""};
-$("mw-login-submit").onclick=()=>{if(loginMode==="admin"){if($("mw-login-password").value!==ADMIN_PASSWORD)return msg("mw-login-msg","❌ Mật khẩu Admin không đúng.");role="admin";customerId=""}else{let id=$("mw-login-customer").value.trim();if(!id)return msg("mw-login-msg","Nhập ID khách hàng nha.");if(!customers[id])return msg("mw-login-msg","Không tìm thấy ID khách hàng.");role="customer";customerId=id}saveLoginSession();$("mw-login-form").hidden=true;setLoginVisible();openPage(isAdmin()?"admin-deposit":"customer-topup")};
-$("mw-logout").onclick=()=>{role="";customerId="";clearLoginSession();setLoginVisible()};
-onValue(ref(db,C),s=>{customers=s.val()||{};if(role==="customer"&&!customers[customerId]){role="";customerId="";clearLoginSession()}setLoginVisible()});
+$("mw-login-submit").onclick=()=>{if(loginMode==="admin"){if($("mw-login-password").value!==ADMIN_PASSWORD)return msg("mw-login-msg","❌ Mật khẩu Admin không đúng.");role="admin";customerId=""}else{let id=$("mw-login-customer").value.trim();if(!id)return msg("mw-login-msg","Nhập ID khách hàng nha.");if(!customers[id])return msg("mw-login-msg","Không tìm thấy ID khách hàng.");role="customer";customerId=id}try{localStorage.removeItem(sessionKey)}catch(e){}$("mw-login-form").hidden=true;setLoginVisible();openPage(isAdmin()?"admin-deposit":"customer-topup")};
+$("mw-logout").onclick=()=>{role="";customerId="";try{localStorage.removeItem(sessionKey)}catch(e){}setLoginVisible()};
+onValue(ref(db,C),s=>{customers=s.val()||{};if(role==="customer"&&!customers[customerId]){role="";customerId=""}setLoginVisible()});
 onValue(ref(db,W),s=>{wallets=s.val()||{};renderAll()});
 onValue(ref(db,R),s=>{requests=s.val()||{};renderAll()});
 onValue(ref(db,T),s=>{transactions=s.val()||{};renderAll()});
@@ -96,17 +378,9 @@ onValue(ref(db,P),s=>{purchases=s.val()||{};renderAll()});
 onValue(ref(db,VB),s=>{batches=s.val()||{};renderAll()});
 onValue(ref(db,VC),s=>{vouchers=s.val()||{};renderAll()});
 onValue(ref(db,VH),s=>{voucherHistory=s.val()||{};renderAll()});
-// Khôi phục đăng nhập trên trình duyệt này; phiên khách được kiểm tra lại khi dữ liệu Firebase tải về.
-try{
-  const saved=JSON.parse(localStorage.getItem(sessionKey)||"null");
-  if(saved && saved.remember===true && saved.role==="customer" && saved.customerId){
-    role="customer"; customerId=String(saved.customerId);
-  }else if(saved && saved.remember===true && saved.role==="admin"){
-    // Không lưu/khôi phục quyền Admin chỉ bằng localStorage vì có thể bị sửa.
-    clearLoginSession();
-  }
-}catch(e){clearLoginSession()}
-function renderAll(){if(!loggedIn())return;$("mw-welcome").textContent=isAdmin()?"Xin chào Admin 👑":"Xin chào "+customerName(customerId)+" 💗";renderAdminSelect();renderVoucherAdmin();renderCustomers();renderAdminTx();renderVoucherHistory();renderCustomerWallet();renderMyTopups();renderMyTx();renderPurchases();renderBankWallet()}
+// Không tự khôi phục phiên chỉ dựa vào localStorage: dữ liệu này có thể bị sửa bởi người dùng.
+try{localStorage.removeItem(sessionKey)}catch(e){}
+let renderPending=false;function renderAll(){if(renderPending)return;renderPending=true;requestAnimationFrame(()=>{renderPending=false;renderAllNow()})}function renderAllNow(){if(!loggedIn())return;$("mw-welcome").textContent=isAdmin()?"Xin chào Admin 👑":"Xin chào "+customerName(customerId)+" 💗";renderAdminSelect();renderVoucherAdmin();renderCustomers();renderAdminTx();renderVoucherHistory();renderCustomerWallet();renderMyTopups();renderMyTx();renderPurchases();renderBankWallet()}
 function renderAdminSelect(){const sel=$("mw-admin-customer");if(!sel)return;const prev=sel.value,q=$("mw-admin-search").value.trim().toLowerCase();const list=Object.keys(customers).filter(id=>(customerName(id)+" "+id).toLowerCase().includes(q));sel.innerHTML='<option value="">-- Chọn khách hàng --</option>'+list.map(id=>`<option value="${esc(id)}">${esc(customerName(id))} · ${esc(id)}</option>`).join("");if(list.includes(prev))sel.value=prev;renderAdminInfo()}function renderAdminInfo(){const id=$("mw-admin-customer").value,w=walletOf(id);$("mw-admin-info").textContent=id?`🐱 ${customerName(id)} · ID: ${id} · Số dư: ${money(w.balance)}`:"🐾 Chọn khách hàng"}$("mw-admin-search").oninput=renderAdminSelect;$("mw-admin-customer").onchange=renderAdminInfo;$("mw-admin-submit").onclick=async function(){if(!isAdmin())return;const id=$("mw-admin-customer").value,amount=Number($("mw-admin-amount").value),note=$("mw-admin-note").value.trim();if(!id||!customers[id])return msg("mw-admin-msg","Hãy chọn khách hàng.");if(!Number.isSafeInteger(amount)||amount<=0)return msg("mw-admin-msg","Số tiền không hợp lệ.");this.disabled=true;try{const res=await runTransaction(ref(db,W+"/"+id),w=>{w=w||{balance:0,totalIn:0,totalOut:0};w.balance=(Number(w.balance)||0)+amount;w.totalIn=(Number(w.totalIn)||0)+amount;return w});if(!res.committed)throw Error("Không cập nhật được ví.");await push(ref(db,T),{customerId:id,name:customerName(id),type:"deposit",amount,note,source:"admin",createdAt:Date.now()});$("mw-admin-amount").value="";$("mw-admin-note").value="";msg("mw-admin-msg","💖 Nạp tiền thành công!")}catch(e){msg("mw-admin-msg","❌ "+e.message)}finally{this.disabled=false}};
 function renderCustomers(){if(!isAdmin())return;let q=$("mw-customer-filter").value.toLowerCase(),list=Object.entries(customers).filter(([id])=>(customerName(id)+" "+id).toLowerCase().includes(q));let ti=0,to=0,tb=0;Object.keys(customers).forEach(id=>{let w=walletOf(id);ti+=+w.totalIn||0;to+=+w.totalOut||0;tb+=+w.balance||0});$("mw-admin-totals").innerHTML=[["Tổng đã nạp",money(ti)],["Tổng đã mua",money(to)],["Tổng số dư",money(tb)]].map(([a,b])=>`<div class="mw-stat"><span>${a}</span><b>${b}</b></div>`).join("");$("mw-admin-customer-list").innerHTML=list.map(([id])=>{let w=walletOf(id);return `<div class="mw-card"><strong>🐱 ${esc(customerName(id))}</strong><p>ID: ${esc(id)}</p><p>Đã nạp: <b class="mw-money">${money(w.totalIn)}</b></p><p>Đã dùng: ${money(w.totalOut)}</p><p>Số dư: <b class="mw-money">${money(w.balance)}</b></p></div>`}).join("")||'<div class="mw-empty">Không tìm thấy khách.</div>'}
 $("mw-customer-filter").oninput=renderCustomers;
@@ -120,9 +394,31 @@ $("mw-create-vouchers").onclick=async function(){if(!isAdmin())return;let amount
 function renderBankWallet(){if(!customerId)return;const w=walletOf(customerId);const el=$("mw-bank-wallet");if(el)el.innerHTML=`💗 Đã nạp: <b>${money(w.totalIn)}</b><br>🛍️ Đã sử dụng: <b>${money(w.totalOut)}</b><br>💰 Số dư: <b>${money(w.balance)}</b>`;const bc=$("mw-bank-content");if(bc)bc.textContent="MEOW "+customerId}let pickedFile=null,proofDataURL="";$("mw-already-paid").onclick=()=>{if(role!=="customer"||!customerId)return;const amount=Number($("mw-topup-amount").value);if(!Number.isSafeInteger(amount)||amount<=0)return msg("mw-topup-msg","💗 Nhập số tiền cần nạp trước nha.");$("mw-proof-box").hidden=false;$("mw-bank-content").textContent="MEOW "+customerId;msg("mw-topup-msg","💌 Kiểm tra số tiền rồi tải ảnh chuyển khoản lên nha.")};$("mw-copy-bank").onclick=async()=>{try{await navigator.clipboard.writeText("8817159793");msg("mw-topup-msg","📋 Đã sao chép số tài khoản.")}catch(e){msg("mw-topup-msg","Số tài khoản: 8817159793")}};$("mw-proof-file").onchange=()=>{const f=$("mw-proof-file").files?.[0],preview=$("mw-proof-preview");pickedFile=null;proofDataURL="";$("mw-send-proof").disabled=true;preview.hidden=true;preview.removeAttribute("src");if(!f)return;if(!f.type.startsWith("image/")){msg("mw-topup-msg","Chỉ chọn file ảnh nha.");return}if(f.size>2*1024*1024){msg("mw-topup-msg","Ảnh tối đa 2 MB nha.");$("mw-proof-file").value="";return}const reader=new FileReader();reader.onload=()=>{if(typeof reader.result!=="string"||!reader.result.startsWith("data:image/"))return msg("mw-topup-msg","Không đọc được ảnh.");proofDataURL=reader.result;pickedFile=f;preview.src=proofDataURL;preview.hidden=false;$("mw-proof-file-info").textContent=f.name+" · "+Math.round(f.size/1024)+" KB";$("mw-send-proof").disabled=false};reader.readAsDataURL(f)};$("mw-send-proof").onclick=async function(){if(role!=="customer"||!customerId)return;const amount=Number($("mw-topup-amount").value);if(!Number.isSafeInteger(amount)||amount<=0)return msg("mw-topup-msg","Nhập số tiền hợp lệ.");if(!pickedFile||!proofDataURL)return msg("mw-topup-msg","Chọn ảnh chuyển khoản trước nha.");if(!confirm("Gửi yêu cầu nạp "+money(amount)+" để Admin xác minh?"))return;this.disabled=true;try{await set(push(ref(db,R)),{customerId,name:customerName(customerId),amount,note:$("mw-proof-note").value.trim(),imageUrl:proofDataURL,imageName:pickedFile.name,imageType:pickedFile.type,imageSize:pickedFile.size,status:"pending",createdAt:Date.now()});$("mw-topup-amount").value="";$("mw-proof-note").value="";$("mw-proof-file").value="";$("mw-proof-preview").hidden=true;$("mw-proof-preview").removeAttribute("src");$("mw-proof-box").hidden=true;pickedFile=null;proofDataURL="";msg("mw-topup-msg","💗 Đã gửi yêu cầu và ảnh chuyển khoản! Chờ Admin xác minh nha.");openPage("customer-topup-history")}catch(e){msg("mw-topup-msg","❌ Gửi thất bại: "+e.message)}finally{this.disabled=false}};$("mw-image-close").onclick=()=>{$("mw-image-modal").hidden=true;$("mw-large-image").src=""};$("mw-image-modal").onclick=e=>{if(e.target===$("mw-image-modal")){$("mw-image-modal").hidden=true;$("mw-large-image").src=""}};
 function renderCustomerWallet(){if(!customerId)return;let w=walletOf(customerId);$("mw-customer-wallet").innerHTML=`💗 Đã nạp: <b>${money(w.totalIn)}</b><br>🛍️ Đã sử dụng: <b>${money(w.totalOut)}</b><br>💰 Số dư: <b>${money(w.balance)}</b>`}
 $("mw-redeem-voucher").onclick=async function(){if(role!=="customer"||!customerId)return;let code=$("mw-redeem-code").value.trim().toUpperCase();if(!code)return msg("mw-redeem-msg","Nhập mã voucher trước nha.");this.disabled=true;msg("mw-redeem-msg","Đang xác minh mã...");let voucherRef=ref(db,VC+"/"+code),claimed=false,amount=0,batchId="",now=Date.now();try{let snap=await get(voucherRef);if(!snap.exists())throw Error("Mã không hợp lệ.");let original=snap.val();amount=Number(original.amount);batchId=original.batchId||"";if(!Number.isSafeInteger(amount)||amount<=0)throw Error("Giá trị mã không hợp lệ.");if(voucherHasCustomer(original,customerId))throw Error("Tài khoản của bà đã dùng mã này rồi.");let claim=await runTransaction(voucherRef,current=>{if(!current)return;if(!Number.isFinite(Number(current.slots))){if(current.usedBy)return;current.usedBy=customerId;current.usedAt=now;current.usedCount=1;return current}let slots=Math.max(1,Number(current.slots)||1);current.usedBy=current.usedBy&&typeof current.usedBy==="object"?current.usedBy:{};if(current.usedBy[customerId])return;let used=Number(current.usedCount)||Object.keys(current.usedBy).length;if(used>=slots)return;current.usedBy[customerId]={usedAt:now};current.usedCount=used+1;current.usedAt=now;return current});if(!claim.committed)throw Error("Mã đã đủ slot hoặc tài khoản của bà đã dùng mã này rồi.");claimed=true;try{let wr=await runTransaction(ref(db,W+"/"+customerId),w=>{w=w||{balance:0,totalIn:0,totalOut:0};w.balance=(Number(w.balance)||0)+amount;w.totalIn=(Number(w.totalIn)||0)+amount;return w});if(!wr.committed)throw Error("Không cập nhật được ví.")}catch(walletErr){await runTransaction(voucherRef,current=>{if(!current)return current;if(current.usedBy&&typeof current.usedBy==="object"&&current.usedBy[customerId]){delete current.usedBy[customerId];current.usedCount=Math.max(0,(Number(current.usedCount)||1)-1);return current}if(current.usedBy===customerId){current.usedBy="";current.usedAt=null;current.usedCount=0;return current}return current});claimed=false;throw walletErr}let hist={customerId,name:customerName(customerId),code,amount,batchId,createdAt:now,type:"voucher"};await push(ref(db,VH),hist);await push(ref(db,T),{...hist,type:"deposit",source:"voucher",note:"Nạp tiền bằng voucher "+code});if(batchId){let br=ref(db,VB+"/"+batchId);await runTransaction(br,b=>{if(!b)return b;b.usedCount=(Number(b.usedCount)||0)+1;return b})}$("mw-redeem-code").value="";msg("mw-redeem-msg","🎉 Đổi mã thành công! Ví đã được cộng "+money(amount)+".");renderAll()}catch(e){msg("mw-redeem-msg","❌ "+e.message)}finally{this.disabled=false}};
-function renderVoucherHistory(){if(!isAdmin())return;let q=$("mw-admin-vh-filter").value.trim().toLowerCase(),list=rows(voucherHistory).filter(([id,h])=>(h.code+" "+h.customerId+" "+h.name).toLowerCase().includes(q));$("mw-admin-voucher-history-list").innerHTML=list.map(([id,h])=>`<div class="mw-card"><strong>💗 Nạp bằng voucher</strong><p>Khách: ${esc(h.name||customerName(h.customerId))} · ID: ${esc(h.customerId)}</p><p>Mã: <span class="mw-code">${esc(h.code)}</span></p><p>Số tiền: <b class="mw-money">${money(h.amount)}</b></p><p>Thời gian: ${h.createdAt?new Date(h.createdAt).toLocaleString("vi-VN"):""}</p></div>`).join("")||'<div class="mw-empty">Chưa có lịch sử nạp voucher.</div>'}
+
+async function revokeVoucher(historyId,button){
+ if(!isAdmin())return;
+ const h=voucherHistory[historyId];if(!h||h.revoked)return alert("Voucher đã thu hồi hoặc không tồn tại.");
+ const amount=Number(h.amount),cid=String(h.customerId||"");
+ if(!cid||!Number.isSafeInteger(amount)||amount<=0)return alert("Thông tin voucher không hợp lệ.");
+ if(!confirm(`Thu hồi ${money(amount)} đã nạp bằng mã ${h.code} của ${customerName(cid)}?`))return;
+ button.disabled=true;
+ const hr=ref(db,VH+"/"+historyId);
+ let locked=false;
+ try{
+  const lock=await runTransaction(hr,v=>{if(!v||v.revoked||v.revoking)return;v.revoking=true;return v});
+  if(!lock.committed)throw Error("Lượt nạp đang được xử lý hoặc đã thu hồi.");locked=true;
+  const wr=await runTransaction(ref(db,W+"/"+cid),w=>{if(!w)return;const balance=Number(w.balance)||0,totalIn=Number(w.totalIn)||0;if(balance<amount||totalIn<amount)return;w.balance=balance-amount;w.totalIn=totalIn-amount;return w});
+  if(!wr.committed)throw Error("Số dư hiện tại hoặc tổng đã nạp không đủ để thu hồi.");
+  await update(hr,{revoked:true,revoking:false,revokedAt:Date.now(),revokedBy:"admin"});locked=false;
+  // Không trả slot để tránh khách dùng lại mã cũ. Lưu lịch sử kiểm toán.
+  await push(ref(db,T),{customerId:cid,name:h.name||customerName(cid),type:"withdrawal",amount,source:"voucher_reversal",voucherHistoryId:historyId,code:h.code,note:"Admin thu hồi voucher "+h.code,createdAt:Date.now()});
+  alert("Đã thu hồi khoản nạp voucher. Slot đã sử dụng vẫn được giữ để tránh đổi lại mã.");
+ }catch(e){if(locked)try{await update(hr,{revoking:false})}catch(_){}alert("Không thể thu hồi: "+e.message)}finally{button.disabled=false}
+}
+
+function renderVoucherHistory(){if(!isAdmin())return;let q=$("mw-admin-vh-filter").value.trim().toLowerCase(),list=rows(voucherHistory).filter(([id,h])=>(h.code+" "+h.customerId+" "+h.name).toLowerCase().includes(q));$("mw-admin-voucher-history-list").innerHTML=list.map(([id,h])=>`<div class="mw-card"><strong>💗 Nạp bằng voucher</strong><p>Khách: ${esc(h.name||customerName(h.customerId))} · ID: ${esc(h.customerId)}</p><p>Mã: <span class="mw-code">${esc(h.code)}</span></p><p>Số tiền: <b class="mw-money">${money(h.amount)}</b></p><p>Thời gian: ${h.createdAt?new Date(h.createdAt).toLocaleString("vi-VN"):""}</p>${h.revoked?'<span class="mw-status bad">Đã thu hồi</span>':`<button class="mw-reject" data-revoke-voucher="${esc(id)}">↩️ Thu hồi voucher</button>`}</div>`).join("")||'<div class="mw-empty">Chưa có lịch sử nạp voucher.</div>';$("mw-admin-voucher-history-list").querySelectorAll("[data-revoke-voucher]").forEach(b=>b.onclick=()=>revokeVoucher(b.dataset.revokeVoucher,b))}
 $("mw-admin-vh-filter").oninput=renderVoucherHistory;
-function renderMyTopups(){if(!customerId)return;let voucherRows=rows(voucherHistory).filter(([id,h])=>String(h.customerId)===String(customerId)).map(([id,h])=>({time:Number(h.createdAt)||0,html:`<div class="mw-card"><strong>🎟️ Nạp bằng voucher</strong><p>Mã: <span class="mw-code">${esc(h.code)}</span></p><p>Số tiền cộng: <b class="mw-money">${money(h.amount)}</b></p><p>Thời gian: ${h.createdAt?new Date(h.createdAt).toLocaleString("vi-VN"):""}</p><span class="mw-status ok">Thành công</span></div>`}));let requestRows=rows(requests).filter(([id,r])=>String(r.customerId)===String(customerId)).map(([id,r])=>({time:Number(r.createdAt)||0,html:`<div class="mw-card"><strong>🏦 Nạp chuyển khoản</strong>${status(r.status)}<p>Số tiền yêu cầu: <b class="mw-money">${money(r.amount)}</b></p><p>Ghi chú: ${esc(r.note||"Không có")}</p><p>Thời gian gửi: ${r.createdAt?new Date(r.createdAt).toLocaleString("vi-VN"):""}</p>${r.reviewNote?`<p>Lý do từ chối: ${esc(r.reviewNote)}</p>`:""}${r.reviewedAt?`<p>Thời gian xử lý: ${new Date(r.reviewedAt).toLocaleString("vi-VN")}</p>`:""}${r.imageUrl?`<button class="mw-secondary" data-history-image="${esc(r.imageUrl)}">🖼️ Xem ảnh chuyển khoản</button>`:""}</div>`}));let manualDepositRows=rows(transactions).filter(([id,t])=>String(t.customerId)===String(customerId)&&t.type==="deposit"&&t.source!=="voucher"&&t.source!=="topup_request"&&!t.voided).map(([id,t])=>({time:Number(t.createdAt)||0,html:`<div class="mw-card"><strong>💗 Nạp tiền vào ví</strong><span class="mw-status ok">Đã cộng tiền</span><p>Số tiền: <b class="mw-money">${money(t.amount)}</b></p><p>Ghi chú: ${esc(t.note||"Nạp tiền")}</p><p>Thời gian: ${t.createdAt?new Date(t.createdAt).toLocaleString("vi-VN"):""}</p></div>`}));let list=[...voucherRows,...requestRows,...manualDepositRows].sort((a,b)=>b.time-a.time);$("mw-my-topup-history").innerHTML=list.map(x=>x.html).join("")||'<div class="mw-empty">Bạn chưa có lịch sử nạp tiền.</div>';$("mw-my-topup-history").querySelectorAll("[data-history-image]").forEach(b=>b.onclick=()=>showImage(b.dataset.historyImage))}
+function renderMyTopups(){if(!customerId)return;let voucherRows=rows(voucherHistory).filter(([id,h])=>String(h.customerId)===String(customerId)).map(([id,h])=>({time:Number(h.createdAt)||0,html:`<div class="mw-card"><strong>🎟️ Nạp bằng voucher</strong><p>Mã: <span class="mw-code">${esc(h.code)}</span></p><p>Số tiền cộng: <b class="mw-money">${money(h.amount)}</b></p><p>Thời gian: ${h.createdAt?new Date(h.createdAt).toLocaleString("vi-VN"):""}</p>${h.revoked?'<span class="mw-status bad">Đã thu hồi</span>':'<span class="mw-status ok">Thành công</span>'}</div>`}));let requestRows=rows(requests).filter(([id,r])=>String(r.customerId)===String(customerId)).map(([id,r])=>({time:Number(r.createdAt)||0,html:`<div class="mw-card"><strong>🏦 Nạp chuyển khoản</strong>${status(r.status)}<p>Số tiền yêu cầu: <b class="mw-money">${money(r.amount)}</b></p><p>Ghi chú: ${esc(r.note||"Không có")}</p><p>Thời gian gửi: ${r.createdAt?new Date(r.createdAt).toLocaleString("vi-VN"):""}</p>${r.reviewNote?`<p>Lý do từ chối: ${esc(r.reviewNote)}</p>`:""}${r.reviewedAt?`<p>Thời gian xử lý: ${new Date(r.reviewedAt).toLocaleString("vi-VN")}</p>`:""}${r.imageUrl?`<button class="mw-secondary" data-history-image="${esc(r.imageUrl)}">🖼️ Xem ảnh chuyển khoản</button>`:""}</div>`}));let manualDepositRows=rows(transactions).filter(([id,t])=>String(t.customerId)===String(customerId)&&t.type==="deposit"&&t.source!=="voucher"&&t.source!=="topup_request"&&!t.voided).map(([id,t])=>({time:Number(t.createdAt)||0,html:`<div class="mw-card"><strong>💗 Nạp tiền vào ví</strong><span class="mw-status ok">Đã cộng tiền</span><p>Số tiền: <b class="mw-money">${money(t.amount)}</b></p><p>Ghi chú: ${esc(t.note||"Nạp tiền")}</p><p>Thời gian: ${t.createdAt?new Date(t.createdAt).toLocaleString("vi-VN"):""}</p></div>`}));let list=[...voucherRows,...requestRows,...manualDepositRows].sort((a,b)=>b.time-a.time);$("mw-my-topup-history").innerHTML=list.map(x=>x.html).join("")||'<div class="mw-empty">Bạn chưa có lịch sử nạp tiền.</div>';$("mw-my-topup-history").querySelectorAll("[data-history-image]").forEach(b=>b.onclick=()=>showImage(b.dataset.historyImage))}
 function showImage(url){if(!url)return;$("mw-large-image").src=url;$("mw-image-modal").hidden=false}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("mw-image-modal").hidden){$("mw-image-modal").hidden=true;$("mw-large-image").src=""}});
 function renderAdminTx(){if(!isAdmin())return;let q=$("mw-admin-tx-filter").value.trim().toLowerCase(),list=rows(transactions).filter(([id,t])=>(id+" "+t.name+" "+t.customerId+" "+t.note).toLowerCase().includes(q));$("mw-admin-tx-list").innerHTML=list.map(([id,t])=>txCard(t,id,true)).join("")||'<div class="mw-empty">Chưa có giao dịch.</div>';document.querySelectorAll("[data-delete-deposit]").forEach(b=>b.onclick=()=>undoDeposit(b.dataset.deleteDeposit,b));let req=rows(requests);$("mw-admin-requests-list").innerHTML=req.map(([id,r])=>`<div class="mw-card"><strong>💗 Yêu cầu nạp chuyển khoản</strong>${status(r.status)}<p>${esc(r.name||customerName(r.customerId))} · ID ${esc(r.customerId)}</p><p>Số tiền: <b class="mw-money">${money(r.amount)}</b></p><p>Ghi chú: ${esc(r.note||"Không ghi chú")}</p><p>Thời gian gửi: ${r.createdAt?new Date(r.createdAt).toLocaleString("vi-VN"):""}</p>${r.reviewNote?`<p>Lý do từ chối: ${esc(r.reviewNote)}</p>`:""}${r.imageUrl?`<button class="mw-secondary" data-show-image="${esc(r.imageUrl)}">🖼️ Xem ảnh chuyển khoản</button>`:"<p>Không có ảnh chuyển khoản.</p>"}${r.status==="pending"?`<div class="mw-actions"><button class="mw-approve" data-approve="${esc(id)}">Duyệt</button><button class="mw-reject" data-reject="${esc(id)}">Từ chối</button></div>`:""}</div>`).join("")||'<div class="mw-empty">Không có yêu cầu.</div>';const dedicatedRequests=$("mw-admin-topup-requests-list");if(dedicatedRequests)dedicatedRequests.innerHTML=req.slice().sort((a,b)=>(Number(b[1].createdAt)||0)-(Number(a[1].createdAt)||0)).map(([id,r])=>`<div class="mw-card"><strong>💗 Yêu cầu nạp chuyển khoản</strong>${status(r.status)}<p>${esc(r.name||customerName(r.customerId))} · ID ${esc(r.customerId)}</p><p>Số tiền: <b class="mw-money">${money(r.amount)}</b></p><p>Ghi chú: ${esc(r.note||"Không ghi chú")}</p><p>Thời gian gửi: ${r.createdAt?new Date(r.createdAt).toLocaleString("vi-VN"):""}</p>${r.reviewNote?`<p>Lý do từ chối: ${esc(r.reviewNote)}</p>`:""}${r.reviewedAt?`<p>Thời gian xử lý: ${new Date(r.reviewedAt).toLocaleString("vi-VN")}</p>`:""}${r.imageUrl?`<button class="mw-secondary" data-show-image="${esc(r.imageUrl)}">🖼️ Xem ảnh chuyển khoản</button>`:"<p>Không có ảnh chuyển khoản.</p>"}${r.status==="pending"?`<div class="mw-actions"><button class="mw-approve" data-approve="${esc(id)}">Chấp nhận</button><button class="mw-reject" data-reject="${esc(id)}">Từ chối</button></div>`:""}</div>`).join("")||`<div class="mw-empty">Chưa có yêu cầu nạp tiền.</div>`;document.querySelectorAll("[data-approve]").forEach(b=>b.onclick=()=>approveTopup(b.dataset.approve));document.querySelectorAll("[data-reject]").forEach(b=>b.onclick=()=>rejectTopup(b.dataset.reject));document.querySelectorAll("[data-show-image]").forEach(b=>b.onclick=()=>showImage(b.dataset.showImage))}
